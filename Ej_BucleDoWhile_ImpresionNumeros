@@ -1,0 +1,26 @@
+/*
+ * Programa que imprima en pantalla los numeros del 1 al 100
+ */
+package clases;
+
+/**
+ * @class ImpresionNumeros
+ * @author Javier Villalba Parra
+ */
+public class ImpresionNumeros {
+    
+    public static void main(String[] args) {
+        
+        //variables
+        int num = 1;//se inicializa en 1, ya que la cuenta es de 1 a 100
+        
+        //impresion de mensaje
+        System.out.println("Numeros del 1 al 100: ");
+        
+        //bucle do/wile que pinta los 100 numeros
+        do {            
+            System.out.println(num);//imprime un numero
+            num++;//a numero le suma uno
+        } while (num <= 100);
+    }   
+}

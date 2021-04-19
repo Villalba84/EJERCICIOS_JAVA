@@ -1,0 +1,39 @@
+/*
+ * Programa que al introducir la nota de un alumno, muestre el mensaje de aprovado
+ * si tiene una nota mayor de 4.
+ */
+package clases;
+
+import java.util.Scanner;
+
+/**
+ * @class NotaAlumno
+ * @author Javier Villalba Parra
+ */
+public class NotaAlumno {
+    
+    public static void main(String[] args) {
+        
+        //variables
+        float nota;
+        
+        //objeto Scanner para leer datos desde teclado
+        Scanner sc = new Scanner(System.in);
+        
+        //introduccion y guardado de datos en variable solicitados al usuario
+        System.out.println("Introduce la nota del alumno: ");
+        nota = sc.nextFloat();
+        
+        /*
+         * condicional donde se comprueba la nota del alumno y se verifica que 
+         * solo se introduzcan notas de 0 a 10
+         */
+        if (nota >= 4 && nota <= 10) {
+            System.out.println("El alumno esta aprobado.");
+        }else if (nota >= 0 && nota < 4) {
+            System.out.println("El alumno esta suspenso.");            
+        }else{
+            System.out.println("Error, solo notas comprendidas entre 0 y 10.");
+        }       
+    }  
+}

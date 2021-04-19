@@ -1,0 +1,57 @@
+/*
+ * Programa que lea por teclado 5 números enteros y los guarde en un array.
+ * A continuación calcula y muestra la media de los valores positivos y la  
+ * de los valores negativos.
+ */
+package clases;
+
+import java.util.Scanner;
+
+/**
+ * @CalNumPositivoNegativo
+ * @author Javier Villalba Parra
+ */
+public class CalNumPositivoNegativo {
+    
+    public static void main(String[] args) {
+        
+        //variables
+        int contPos = 0;//contadores
+        int contNeg = 0;//contadores
+        int num[] = new int[5];//array que contendrá los números leídos por teclado
+        double sumaPos = 0;//acumuladores para las sumas de positivos 
+        double sumaNeg = 0;//acumuladores para las sumas de negativos
+        Scanner sc = new Scanner(System.in);
+        
+        //lectura de datos y llenado de array
+        System.out.println("Lectura de los elementos del array: ");
+        for (int i = 0; i < 5; i++) {
+            System.out.print("numeros[" +i+ "] = ");
+            num[i] = sc.nextInt();
+        }
+        
+        //recorre el array para sumar por separado los numeros positivos y negativos       
+        for (int i = 0; i < 5; i++) {
+            if (num[i] > 0) {//sumar positivos
+                sumaPos += num[i];
+                contPos++;//añadimos uno mas
+            }else if (num[i] < 0) {//sumar negativos
+                sumaNeg += num[i];
+                contNeg++;//añadimos uno mas
+            }            
+        }
+        
+        //calcular y mostrar las medias
+        if (contPos != 0) {
+            System.out.println("Media de los valores positivos: " +sumaPos / contPos);
+        }else {
+            System.out.println("No se han introducido numeros positivos.");
+        }
+        
+        if (contNeg != 0) {
+            System.out.println("Media de los valores positivos: " +sumaNeg / contNeg);
+        }else {
+            System.out.println("No se han introducido numeros negativos.");
+        }        
+    }    
+}
